@@ -1,1 +1,1 @@
-web: gunicorn -b :$PORT app:app
+web: gunicorn -k eventlet -w 1 app:app --log-file=-

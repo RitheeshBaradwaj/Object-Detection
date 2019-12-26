@@ -1,6 +1,9 @@
 #!/usr/bin/env python
+from sys import stdout
+import logging
 from werkzeug.wrappers import Request, Response
 from flask import Flask, render_template
+from flask_socketio import SocketIO
 import cv2
 import sys
 import numpy
@@ -225,6 +228,10 @@ labels = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", 
 
 
 app = Flask(__name__)
+app.logger.addHandler(logging.StreamHandler(stdout))
+app.config['SECRET_KEY'] = 'secret!'
+app.config['DEBUG'] = True
+socketio = SocketIO(app)
 
 @app.route('/')
 def index():
@@ -295,14 +302,16 @@ def get_frame():
 
     del(cap)
 
-@app.route('/calc')
+@app.route('/calc',methods=['GET'])
 def calc():
      return Response(get_frame(),mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 33507))
-    app.run(debug=True,port=port, threaded=True)
+    
+    port = int(os.environ.get('PORT', 5000))
+    #app.run(port=port,debug=False)
+    socketio.run(app,port=port,debug=False)
     #from werkzeug.serving import run_simple
     #run_simple('localhost', 9000, app)
 

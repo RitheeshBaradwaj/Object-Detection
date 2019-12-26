@@ -67,7 +67,7 @@ six==1.12.0
 sounder==0.2.0
 SoundFile==0.10.2
 soupsieve==1.9.5
-tensorflow==1.0.0
+tensorflow==1.15.0
 tflearn==0.3.2
 
 

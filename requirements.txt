@@ -62,11 +62,7 @@ resampy==0.2.2
 scikit-image==0.16.2
 scikit-learn==0.21.3
 scipy==1.3.1
-selenium==3.141.0
-six==1.12.0
-sounder==0.2.0
-SoundFile==0.10.2
-soupsieve==1.9.5
+Werkzeug==0.15.5
 
 
 

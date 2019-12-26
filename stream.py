@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-from flask import Flask, render_template, Response
+from werkzeug.wrappers import Request, Response
+from flask import Flask, render_template
 import cv2
 import sys
 import numpy
@@ -13,7 +14,7 @@ import PIL
 import struct
 import cv2
 from numpy import expand_dims
-import tensorflow as tf
+#import tensorflow as tf
 #from skimage.transform import resize
 from keras import backend as K
 from keras.layers import Input, Lambda, Conv2D, BatchNormalization, LeakyReLU, ZeroPadding2D, UpSampling2D
@@ -21,9 +22,7 @@ from keras.models import load_model, Model
 from keras.layers.merge import add, concatenate
 from keras.preprocessing.image import load_img
 from keras.preprocessing.image import img_to_array
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import imshow
-from matplotlib.patches import Rectangle
+
 
 
 
@@ -189,30 +188,6 @@ def correct_yolo_boxes(boxes, image_h, image_w, net_h, net_w):
         boxes[i].ymin = int((boxes[i].ymin - y_offset) / y_scale * image_h)
         boxes[i].ymax = int((boxes[i].ymax - y_offset) / y_scale * image_h)
 
-from matplotlib.patches import Rectangle
-def draw_boxes(filename, v_boxes, v_labels, v_scores):
-    # load the image
-    data = plt.imread(filename)
-    # plot the image
-    plt.imshow(data)
-    # get the context for drawing boxes
-    ax = plt.gca()
-    # plot each box
-    for i in range(len(v_boxes)):
-        box = v_boxes[i]
-        # get coordinates
-        y1, x1, y2, x2 = box.ymin, box.xmin, box.ymax, box.xmax
-        # calculate width and height of the box
-        width, height = x2 - x1, y2 - y1
-        # create the shape
-        rect = Rectangle((x1, y1), width, height, fill=False, color='red')
-        # draw the box
-        ax.add_patch(rect)
-        # draw text and score in top left corner
-        label = "%s (%.3f)" % (v_labels[i], v_scores[i])
-        plt.text(x1, y1, label, color='red')
-    # show the plot
-    plt.show()
 
 # get all of the results above a threshold
 # takes the list of boxes, known labels, 
@@ -326,8 +301,7 @@ def calc():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', debug=True, threaded=True)
-    #app.run(port = 5000, debug=True)
-    #from werkzeug.serving import run_simple
-    #run_simple('localhost', 9000, app)
+    #app.run(host='localhost', debug=True, threaded=True)
+    from werkzeug.serving import run_simple
+    run_simple('localhost', 9000, app)
 

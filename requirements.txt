@@ -3,3 +3,4 @@ Keras == 2.3.1
 Werkzeug == 0.16.0
 numpy == 1.17.0
 opencv_python == 4.1.0.25
+gunicorn==19.9.0

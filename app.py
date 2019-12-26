@@ -301,7 +301,8 @@ def calc():
 
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True, threaded=True)
+    port = int(os.environ.get('PORT', 33507))
+    app.run(debug=True,port=port, threaded=True)
     #from werkzeug.serving import run_simple
     #run_simple('localhost', 9000, app)
 

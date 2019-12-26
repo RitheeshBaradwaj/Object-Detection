@@ -301,7 +301,7 @@ def calc():
 
 
 if __name__ == '__main__':
-    #app.run(host='localhost', debug=True, threaded=True)
-    from werkzeug.serving import run_simple
-    run_simple('localhost', 9000, app)
+    app.run(port=5000, debug=True, threaded=True)
+    #from werkzeug.serving import run_simple
+    #run_simple('localhost', 9000, app)
 

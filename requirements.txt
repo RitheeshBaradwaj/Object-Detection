@@ -40,7 +40,7 @@ mne==0.18.2
 munkres==1.1.2
 networkx==2.4
 numba==0.45.1
-numpy==1.17.0
+numpy==1.19.1
 opencv-python==4.1.0.25
 pandas==0.25.3
 Pillow==6.1.0

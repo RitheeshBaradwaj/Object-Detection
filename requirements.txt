@@ -59,9 +59,6 @@ PyWavelets==1.1.1
 PyYAML==5.2
 requests==2.22.0
 resampy==0.2.2
-scikit-image==0.16.2
-scikit-learn==0.21.3
-scipy>=0.15.1
 
 
 

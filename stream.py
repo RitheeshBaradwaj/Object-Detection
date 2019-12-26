@@ -5,16 +5,16 @@ import sys
 import numpy
 # YOLO v3
 import os
-import scipy.io
-import scipy.misc
+#import scipy.io
+#import scipy.misc
 import numpy as np
-import pandas as pd
+#import pandas as pd
 import PIL
 import struct
 import cv2
 from numpy import expand_dims
 import tensorflow as tf
-from skimage.transform import resize
+#from skimage.transform import resize
 from keras import backend as K
 from keras.layers import Input, Lambda, Conv2D, BatchNormalization, LeakyReLU, ZeroPadding2D, UpSampling2D
 from keras.models import load_model, Model

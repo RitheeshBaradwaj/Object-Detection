@@ -6,3 +6,4 @@ opencv_python == 4.1.0.25
 gunicorn==19.9.0
 Flask_SocketIO == 4.2.1
 Pillow == 6.2.0
+eventlet==0.20.0

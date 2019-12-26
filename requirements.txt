@@ -30,7 +30,6 @@ Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.0
 kiwisolver==1.1.0
 lazy-object-proxy==1.4.3
-librosa==0.7.0
 llvmlite==0.29.0
 MarkupSafe==1.1.1
 matplotlib==3.1.2
@@ -42,7 +41,6 @@ networkx==2.4
 numba==0.45.1
 numpy==1.17.1
 opencv-python==4.1.0.25
-pandas==0.25.3
 Pillow==6.2.0
 protobuf==3.9.1
 pycparser==2.19
@@ -58,7 +56,6 @@ pytz==2019.3
 PyWavelets==1.1.1
 PyYAML==5.2
 requests==2.22.0
-resampy==0.2.2
 
 
 

@@ -74,5 +74,4 @@ urllib3==1.25.3
 waitress==1.4.1
 wavio==0.0.4
 webdriver-manager==1.8.2
-Werkzeug==0.16.0
 

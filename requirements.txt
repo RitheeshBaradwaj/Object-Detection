@@ -40,14 +40,13 @@ mne==0.18.2
 munkres==1.1.2
 networkx==2.4
 numba==0.45.1
-numpy==1.19.1
+numpy==1.17.1
 opencv-python==4.1.0.25
 pandas==0.25.3
 Pillow==6.1.0
 protobuf==3.9.1
 pycparser==2.19
 pydub==0.23.1
-pyEDFlib==0.1.14
 pygame==1.9.6
 pylint==2.4.4
 pyparsing==2.4.6

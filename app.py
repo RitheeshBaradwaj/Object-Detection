@@ -31,7 +31,11 @@ import pickle
 
 
 #%matplotlib inline
-
+app = Flask(__name__)
+app.logger.addHandler(logging.StreamHandler(stdout))
+app.config['SECRET_KEY'] = 'secret!'
+app.config['DEBUG'] = True
+socketio = SocketIO(app)
 
 # load yolov3 model
 #yolov3 = load_model('yolov3.h5')
@@ -229,11 +233,7 @@ labels = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", 
 
 
 
-app = Flask(__name__)
-app.logger.addHandler(logging.StreamHandler(stdout))
-app.config['SECRET_KEY'] = 'secret!'
-app.config['DEBUG'] = True
-socketio = SocketIO(app)
+
 
 @app.route('/')
 def index():

@@ -12,3 +12,4 @@ Pillow == 6.2.0
 eventlet == 0.20.0
 tensorflow
 requests==2.22.0
+h5py==2.8.0

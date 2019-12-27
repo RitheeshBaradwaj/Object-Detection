@@ -33,7 +33,8 @@ from keras.preprocessing.image import img_to_array
 
 
 # load yolov3 model
-yolov3 = load_model('yolov3.h5')
+#yolov3 = load_model('yolov3.h5')
+yolov3 = pickle.load(open('yolov3.pkl', 'rb'))
 
 from numpy import expand_dims
 def load_image_pixels(filename, shape):

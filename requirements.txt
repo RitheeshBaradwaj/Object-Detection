@@ -8,7 +8,7 @@ numpy == 1.22.0
 opencv_python == 4.2.0.32
 gunicorn == 19.9.0
 Flask_SocketIO == 4.2.1
-Pillow == 9.0.1
+Pillow == 9.3.0
 eventlet == 0.31.0
 tensorflow
 requests==2.22.0

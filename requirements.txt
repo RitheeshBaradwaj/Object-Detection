@@ -3,7 +3,7 @@ Keras == 2.3.1
 itsdangerous == 1.1.0
 Jinja2 == 2.11.3
 MarkupSafe == 1.1.1
-Werkzeug == 2.2.3
+Werkzeug == 3.0.1
 numpy == 1.22.0
 opencv_python == 4.2.0.32
 gunicorn == 19.9.0
